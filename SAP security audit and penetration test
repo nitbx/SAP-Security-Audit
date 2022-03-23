@@ -61,12 +61,14 @@ Check that the technology infrastructure is configured to secure communications 
 Security policy settings (password policy, network encryption, ..)
 ———————————————————————————————————————————————————————————————————
 Collect and Review the "RSPARAM" configuration file (Use the Tcode SA38 and then enter RSPARAM)
-> Login / password_Expiration			- Frequency of forced password change (default = 0 = off)
-> Login / min_password				- Minimum password length (default = 3)
-> Login / fails_to_user_lock			- Number of invalid password attempts before user is locked (default = 12)
-> Login / failed_user_auto_unlock		- If user account is locked is it permanently locked until released by administrator or automatically unlocked at midnight (default = 1 = unlocked at midnight)
-> Rdisp / gui_auto_logout			- User is logged off of SAP after a period of inactivity (default = 7200 seconds = 2 hours)
-> Login / disable_multi_gui_login		- (default = 0 = multiple logons permitted)
+> login/password_expiration_time 			- Frequency of forced password change (default = 0 = off)
+> login/min_password_letters				- Min. number of letters in passwords (default = 0)
+> login/min_password_specials				- Min. number of special characters in passwords (default = 0) 
+> login/min_password_lowercase				- Min. number of lower-case characters in passwords (default = 0) 
+> login/fails_to_user_lock				- Number of invalid password attempts before user is locked (default = 12)
+> login/failed_user_auto_unlock				- If user account is locked is it permanently locked until released by administrator or automatically unlocked at midnight (default = 1 = unlocked at midnight)
+> rdisp/gui_auto_logout					- User is logged off of SAP after a period of inactivity (default = 7200 seconds = 2 hours)
+> login/isable_multi_gui_login				- (default = 0 = multiple logons permitted)
 NOTE: if multi-login is disabled some users can still be permitted multiple logins via the “login/multi_login_users” setting where user-ids can be listed which can be permitted to logon multiple times
 
 Parameters				Description
